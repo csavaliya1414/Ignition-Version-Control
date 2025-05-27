@@ -1,0 +1,998 @@
+{
+  "custom": {},
+  "params": {
+    "equipmentPath": "Enterprise\\\\Site\\\\Area\\\\Green Bean Storage\\\\Silo 3",
+    "material": "green beans",
+    "quantity": 10
+  },
+  "propConfig": {
+    "params.equipmentPath": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.material": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.quantity": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Silo 1"
+        },
+        "position": {
+          "display": false,
+          "grow": 1
+        },
+        "props": {
+          "elements": [
+            {
+              "name": "symbol",
+              "type": "symbol"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": 0,
+                      "stopColor": "#1111AA",
+                      "style": {
+                        "stopColor": "#9999AA"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": 0,
+                      "stopColor": "#EEEEEE",
+                      "style": {
+                        "stopColor": "#EEEEEE"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": 0.9,
+                      "stopColor": "#B2B2AA",
+                      "style": {
+                        "stopColor": "#B2B2AA"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_1_",
+                  "name": "SVGID_1_",
+                  "type": "linearGradient",
+                  "x1": 0.3391,
+                  "x2": 90.2356,
+                  "y1": 40.0879,
+                  "y2": 40.0879
+                },
+                {
+                  "d": "M5.52,4.729v41.554l-5.181,6.87v6.419l5.181,0.112v-5.18l17.342,33.333l13.739-0.113l17.455-33.22   v5.18h5.18v-6.531l-5.18-6.87V4.729h-4.392V0.338H36.713v4.392H24.551l-1.689-1.802h-3.49l-1.689,1.802H15.88l-1.689-1.802h-3.491   L9.011,4.729H5.52z",
+                  "fill": {
+                    "url": "url(#SVGID_1_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Silo",
+              "name": "Group_Silo",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "d": "M54.056,59.685l5.18-5.18",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M54.056,54.504l5.18,5.18",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M0.339,59.685l5.181-5.18",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M0.339,54.504l5.181,5.18",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M59.236,53.153h-5.18v-6.87L59.236,53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M53.38,53.153h-4.167v-6.982L53.38,53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M47.525,53.153h-3.153v-6.982L47.525,53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M41.556,53.153h-2.027v-6.982L41.556,53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M35.699,53.153h-1.013v-6.982L35.699,53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M29.844,53.153v-6.982V53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M23.989,53.153h1.013v-6.982L23.989,53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M18.02,53.153h2.14v-6.982L18.02,53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M12.164,53.153h3.152v-6.982L12.164,53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M6.308,53.153h4.054v-6.982L6.308,53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M0.339,53.153H5.52v-6.87L0.339,53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M0.339,53.153h58.896v1.351H0.339V53.153",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M5.52,44.933h48.536v1.351H5.52V44.933",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M36.713,4.617h13.401",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M35.813,2.815h15.202",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M35.813,3.716h15.202",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M9.011,4.729h6.869",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M17.682,4.729h6.869",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Outer_Rings",
+              "name": "Group_Outer_Rings",
+              "type": "group"
+            },
+            {
+              "elements": [
+                {
+                  "elements": [
+                    {
+                      "name": "stop",
+                      "offset": "0",
+                      "stopColor": "#7F7F7F",
+                      "style": {
+                        "stopColor": "#7F7F7F"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "0.5",
+                      "stopColor": "#E5E5E2",
+                      "style": {
+                        "stopColor": "#E5E5E2"
+                      },
+                      "type": "stop"
+                    },
+                    {
+                      "name": "stop",
+                      "offset": "1",
+                      "stopColor": "#7F7F7F",
+                      "style": {
+                        "stopColor": "#7F7F7F"
+                      },
+                      "type": "stop"
+                    }
+                  ],
+                  "gradientUnits": "userSpaceOnUse",
+                  "id": "SVGID_2_",
+                  "name": "SVGID_2_",
+                  "type": "linearGradient",
+                  "x1": "21.1731",
+                  "x2": "38.4026",
+                  "y1": "99.9434",
+                  "y2": "99.9434"
+                },
+                {
+                  "d": "M22.862,112.05v-4.392h1.689v-4.279h-0.788l-0.901-1.352l0.901-1.239h0.788v-6.081h-1.689   l-0.9-4.279h-0.788v-2.59h17.229v2.59h-0.788l-0.901,4.279h-1.688v6.081h0.788l0.9,1.239l-0.9,1.352h-0.788v4.279h1.688v4.392   H22.862",
+                  "fill": {
+                    "url": "url(#SVGID_2_)"
+                  },
+                  "name": "path",
+                  "type": "path"
+                },
+                {
+                  "d": "M21.961,90.428h15.653",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M24.551,94.707h10.474",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M24.551,100.788h10.474",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M24.551,103.379h10.474",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                },
+                {
+                  "d": "M24.551,107.658h10.474",
+                  "fill": {
+                    "paint": "transparent"
+                  },
+                  "name": "path",
+                  "stroke": {
+                    "paint": "#4C4C4C",
+                    "width": "0.25"
+                  },
+                  "type": "path"
+                }
+              ],
+              "id": "Group_Outlet",
+              "name": "Group_Outlet",
+              "type": "group"
+            }
+          ],
+          "viewBox": "0 0 59.688 112.5"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "Tank 5"
+        },
+        "props": {
+          "elements": [
+            {
+              "d": "M287,497 l0,2 -40,0 0,-2 7,0 6,0 3,0 4,0 3,0 4,0 5,0 8,0z",
+              "fill": {
+                "paint": "#333"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M72,497 l0,2 -40,0 0,-2 8,0 5,0 4,0 3,0 3,0 4,0 5,0 8,0z",
+              "fill": {
+                "paint": "#333"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M75,379 l0,100 -5,0 0,6 35,-1 0,-5 -5,0 0,-65 -25,-35z",
+              "fill": {
+                "paint": "#333"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M220,414 l0,65 -5,0 0,6 35,-1 0,-5 -5,0 0,-100 -25,35z",
+              "fill": {
+                "paint": "#333"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M177,469 l123,-179 0,-260 -10,-20 10,0 19,20 0,260 -139,179 -3,0z",
+              "fill": {
+                "paint": "#4c4c4c"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M142,469 l-122,-179 0,-260 10,-20 -10,0 -20,20 0,260 140,179 2,0z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M172,469 l78,-179 0,-260 -10,-20 25,0 10,20 0,260 -100,179 -3,0z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M175,469 l100,-179 0,-260 -10,-20 25,0 10,20 0,260 -123,179 -2,0z",
+              "fill": {
+                "paint": "#666"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M145,469 l-100,-179 0,-260 10,-20 -25,0 -10,20 0,260 122,179 3,0z",
+              "fill": {
+                "paint": "#999"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M170,469 l55,-179 0,-260 -10,-20 25,0 10,20 0,260 -78,179 -2,0z",
+              "fill": {
+                "paint": "#999"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M147,469 l-77,-179 0,-260 10,-20 -25,0 -10,20 0,260 100,179 2,0z",
+              "fill": {
+                "paint": "#b2b2b2"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M167,469 l33,-179 0,-260 -8,-20 23,0 10,20 0,260 -55,179 -3,0z",
+              "fill": {
+                "paint": "#b2b2b2"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M150,469 l-55,-179 0,-260 10,-20 -25,0 -10,20 0,260 77,179 3,0z",
+              "fill": {
+                "paint": "#ccc"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M165,469 l10,-179 0,-260 -5,-20 22,0 8,20 0,260 -33,179 -2,0z",
+              "fill": {
+                "paint": "#ccc"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M154,469 l-34,-179 0,-260 7,-20 -22,0 -10,20 0,260 55,179 4,0z",
+              "fill": {
+                "paint": "#e5e5e5"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M160,469 l-15,-179 0,-260 5,-20 20,0 5,20 0,260 -10,179 -5,0z",
+              "fill": {
+                "paint": "#e5e5e5"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M160,469 l-15,-179 0,-260 5,-20 -23,0 -7,20 0,260 34,179 6,0z",
+              "fill": {
+                "paint": "#fff"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M240,10 l-80,-10 140,10 -60,0z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M160,0 l20,10 60,0 -80,-10z",
+              "fill": {
+                "paint": "#b2b2b2"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M160,0 l-35,10 55,0 -20,-10z",
+              "fill": {
+                "paint": "#e5e5e5"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M125,10 l35,-10 -85,10 50,0z",
+              "fill": {
+                "paint": "#ccc"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M160,0 l-85,10 -55,0 140,-10z",
+              "fill": {
+                "paint": "#b2b2b2"
+              },
+              "name": "path",
+              "type": "path"
+            },
+            {
+              "d": "M20,10 l280,0 -140,-10 -140,10",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M0,290 l140,179 40,0 139,-179 0,-260 -19,-20 -280,0 -20,20 0,260",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M319,282 l-3,3 -9,2 -15,2 -19,2 -24,2 -27,1 -29,1 -32,0 -32,0 -29,-1 -27,-1 -24,-2 -19,-2 -15,-2 -9,-2 -3,-3",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#b2b2b2",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M319,38 l-3,-3 -9,-2 -15,-2 -19,-2 -24,-2 -27,-1 -29,-1 -32,0 -32,0 -29,1 -27,1 -24,2 -19,2 -15,2 -9,2 -3,3",
+              "fill": {
+                "paint": "transparent"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#b2b2b2",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M72,497 l0,2 -40,0 0,-2 8,0 5,0 4,0 3,0 3,0 4,0 5,0 8,0z",
+              "fill": {
+                "paint": "#333"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M67,494 l-7,0 0,-135 7,10 0,125z",
+              "fill": {
+                "paint": "#4c4c4c"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M60,494 l-8,0 0,-145 8,10 0,135z",
+              "fill": {
+                "paint": "#666"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M52,494 l-7,0 0,-155 7,11 0,144z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M282,494 l-7,0 0,-155 7,-9 0,164z",
+              "fill": {
+                "paint": "#4c4c4c"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M67,494 l-7,0 0,-135 7,10 0,125z",
+              "fill": {
+                "paint": "#4c4c4c"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M275,494 l-8,0 0,-145 8,-10 0,155z",
+              "fill": {
+                "paint": "#666"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M60,494 l-8,0 0,-145 8,10 0,135z",
+              "fill": {
+                "paint": "#666"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M267,494 l-7,0 0,-135 7,-9 0,144z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M52,494 l-7,0 0,-155 7,11 0,144z",
+              "fill": {
+                "paint": "#7f7f7f"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M260,494 l27,0 0,3 -40,0 0,-3 5,0 0,-125 8,-10 0,135z",
+              "fill": {
+                "paint": "#b2b2b2"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            },
+            {
+              "d": "M45,494 l27,0 0,3 -40,0 0,-3 5,0 0,-165 8,10 0,155z",
+              "fill": {
+                "paint": "#b2b2b2"
+              },
+              "name": "path",
+              "stroke": {
+                "paint": "#4c4c4c",
+                "width": "2"
+              },
+              "type": "path"
+            }
+          ],
+          "viewBox": "0 0 319 499"
+        },
+        "type": "ia.shapes.svg"
+      },
+      {
+        "meta": {
+          "name": "lbl_silo"
+        },
+        "position": {
+          "basis": "80px"
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.equipmentPath"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn value.split(\u0027\\\\\u0027)[-1]",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "classes": "Title/Text",
+            "fontSize": 18,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "basis": "60px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.quantity"
+              },
+              "transforms": [
+                {
+                  "code": "\treturn str(value) + \u0027 lbs\u0027",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "textAlign": "center"
+          },
+          "textStyle": {
+            "classes": "Page/Text",
+            "fontSize": 16
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "basis": "60px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.material"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "textAlign": "center"
+          },
+          "textStyle": {
+            "classes": "Page/Text",
+            "fontSize": 16
+          }
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\timport system\n\t\n\tpath \u003d self.view.params.equipmentPath\n\t\n\tstartTime \u003d system.date.now()\n\tendTime \u003d startTime\n\t\n\tday \u003d system.date.getDayOfYear(startTime)\n\thour \u003d system.date.getHour24(startTime)\n\tmin \u003d system.date.getMinute(startTime)\n\tsec \u003d system.date.getSecond(startTime)\n\tbatchID \u003d \u0027EGB_%s%s%s%s\u0027 % (str(day), str(hour), str(min), str(sec)) \n\t\n\tmatIn \u003d []\n\tmatOut \u003d [{\u0027id\u0027:\u0027MatOut1\u0027, \u0027Name\u0027:\u0027OutputMaterial\u0027, \u0027LotNo\u0027:batchID,\u0027MaterialName\u0027:\u0027Ethiopian Green Beans\u0027, \u0027Quantity\u0027:700.0, \u0027Units\u0027: \u0027Each\u0027, \u0027Status\u0027:\u0027Completed\u0027, \u0027BeginDateTime\u0027:startTime, \u0027EndDateTime\u0027:endTime, \u0027EquipmentPath\u0027:path, \u0027AutoCreateLot\u0027:True}]\n\tsystem.mes.trace.recordOperation(id\u003dbatchID, name\u003d\u0027Receive Raw Beans\u0027, beginDateTime\u003dstartTime, endDateTime\u003dendTime, equipmentPath\u003dpath, workOrder\u003d\u0027\u0027, materialIn\u003dmatIn, materialOut\u003dmatOut)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "cursor": "pointer",
+        "marginBottom": 20
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

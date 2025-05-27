@@ -1,0 +1,72 @@
+{
+  "custom": {},
+  "params": {
+    "batchID": "value",
+    "itemPath": "value"
+  },
+  "propConfig": {
+    "params.batchID": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.itemPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "docDocumentViewer"
+        },
+        "position": {
+          "basis": "400px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.batchInfo.batchID": {
+            "binding": {
+              "config": {
+                "path": "view.params.batchID"
+              },
+              "type": "property"
+            }
+          },
+          "props.batchInfo.itemPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.itemPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "batchInfo": {},
+          "documentText": ""
+        },
+        "type": "mes.doc.docDocumentViewer"
+      }
+    ],
+    "events": {
+      "system": {
+        "onShutdown": {
+          "config": {
+            "script": "\tsystem.perspective.sendMessage(\u0027updateInventory\u0027, {\u0027update\u0027:\u0027this\u0027},\u0027session\u0027)"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "custom": {},
+  "params": {
+    "BatchID": "",
+    "Step": ""
+  },
+  "propConfig": {
+    "params.BatchID": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Step": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 510
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "docDocumentViewer"
+        },
+        "position": {
+          "height": "80%",
+          "width": "95%",
+          "x": 16,
+          "y": 88
+        },
+        "propConfig": {
+          "props.batchInfo.batchID": {
+            "binding": {
+              "config": {
+                "path": "view.params.BatchID"
+              },
+              "type": "property"
+            }
+          },
+          "props.batchInfo.itemPath": {
+            "binding": {
+              "config": {
+                "path": "view.params.Step"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "batchInfo": {},
+          "documentText": ""
+        },
+        "type": "mes.doc.docDocumentViewer"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 180,
+          "x": 142,
+          "y": 13
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.BatchID"
+              },
+              "transforms": [
+                {
+                  "expression": "if(isNull({value}), \"Idle\", {value})",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontFamily": "monospace",
+            "fontSize": 16
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 32,
+          "width": 115,
+          "x": 16,
+          "y": 15
+        },
+        "props": {
+          "style": {
+            "fontFamily": "Roboto",
+            "fontSize": 16
+          },
+          "text": "Serial Number"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_1"
+        },
+        "position": {
+          "height": 32,
+          "width": 115,
+          "x": 16,
+          "y": 56
+        },
+        "props": {
+          "style": {
+            "fontFamily": "Roboto",
+            "fontSize": 16
+          },
+          "text": "Instructions"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

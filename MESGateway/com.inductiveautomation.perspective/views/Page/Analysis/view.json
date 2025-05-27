@@ -1,0 +1,52 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 828,
+      "width": 982
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "FlexContainer"
+        },
+        "position": {
+          "basis": "501px"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "DateTimeInput_0"
+        },
+        "position": {
+          "basis": "170px"
+        },
+        "props": {
+          "placeholder": "Select End Date"
+        },
+        "type": "ia.input.date-time-input"
+      },
+      {
+        "meta": {
+          "name": "DateTimeInput"
+        },
+        "position": {
+          "basis": "170px"
+        },
+        "props": {
+          "pickerType": "date",
+          "placeholder": "Select Begin Date"
+        },
+        "type": "ia.input.date-time-input"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

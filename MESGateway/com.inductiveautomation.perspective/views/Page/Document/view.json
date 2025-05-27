@@ -1,0 +1,78 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "batchSelector"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "type": "mes.production.batchSelector"
+      },
+      {
+        "meta": {
+          "name": "batchController"
+        },
+        "position": {
+          "basis": "800px"
+        },
+        "propConfig": {
+          "props.batchID": {
+            "binding": {
+              "config": {
+                "path": "../batchSelector.props.selectedBatchID"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "marginBottom": 20,
+            "marginTop": 30
+          }
+        },
+        "type": "mes.batch.batchController"
+      },
+      {
+        "meta": {
+          "name": "docDocumentViewer"
+        },
+        "propConfig": {
+          "props.batchInfo.batchID": {
+            "binding": {
+              "config": {
+                "path": "../batchController.props.batchID"
+              },
+              "type": "property"
+            }
+          },
+          "props.batchInfo.itemPath": {
+            "binding": {
+              "config": {
+                "path": "../batchController.props.itemPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "batchInfo": {},
+          "documentText": ""
+        },
+        "type": "mes.doc.docDocumentViewer"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

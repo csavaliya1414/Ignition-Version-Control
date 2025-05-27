@@ -1,0 +1,23 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "oeeMaterialManager"
+        },
+        "position": {
+          "height": "90%",
+          "width": "90%"
+        },
+        "type": "mes.oee.materialManager"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

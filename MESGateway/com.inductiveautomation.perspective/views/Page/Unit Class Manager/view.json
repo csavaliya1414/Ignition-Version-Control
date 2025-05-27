@@ -1,0 +1,31 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 814,
+      "width": 1116
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "unitClassManager"
+        },
+        "position": {
+          "basis": "470px",
+          "grow": 1
+        },
+        "type": "mes.batch.unitClassManager"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ebrViewer"
+        },
+        "position": {
+          "height": "85%",
+          "width": "95%",
+          "x": 7,
+          "y": 81
+        },
+        "propConfig": {
+          "props.batchID": {
+            "binding": {
+              "config": {
+                "path": "../batchSelector.props.selectedBatchID"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "procedure": {
+            "steps": {
+              "includeIdleSteps": true
+            }
+          },
+          "step": {
+            "steps": {
+              "includeIdleSteps": true
+            }
+          }
+        },
+        "type": "mes.batch.ebrViewer"
+      },
+      {
+        "meta": {
+          "name": "batchSelector"
+        },
+        "position": {
+          "height": 59,
+          "width": "82%",
+          "x": 7,
+          "y": 11
+        },
+        "propConfig": {
+          "props.batchType": {
+            "binding": {
+              "config": {
+                "expression": "if({../Checkbox.props.selected}, \"Executed\", \"Active\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "type": "mes.production.batchSelector"
+      },
+      {
+        "meta": {
+          "name": "Checkbox"
+        },
+        "position": {
+          "height": 36,
+          "width": 151,
+          "x": "85%",
+          "y": 22.5
+        },
+        "props": {
+          "text": "Show Executed"
+        },
+        "type": "ia.input.checkbox"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

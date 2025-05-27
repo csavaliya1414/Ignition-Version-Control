@@ -1,0 +1,62 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "mesAnalysisController"
+        },
+        "position": {
+          "height": 64,
+          "rotate": {
+            "anchor": "-92% 50%"
+          },
+          "width": 64,
+          "x": 637,
+          "y": 43
+        },
+        "props": {
+          "data": {
+            "$": [
+              "ds",
+              192,
+              1632502280100
+            ],
+            "$columns": []
+          },
+          "drillDownOptions": {
+            "$": [
+              "ds",
+              192,
+              1632502280100
+            ],
+            "$columns": []
+          },
+          "endDate": {
+            "$": [
+              "ts",
+              192,
+              1632502280100
+            ],
+            "$ts": 1632502280100
+          },
+          "startDate": {
+            "$": [
+              "ts",
+              192,
+              1632502280100
+            ],
+            "$ts": 1629823880100
+          }
+        },
+        "type": "mes.production.mesAnalysisController"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

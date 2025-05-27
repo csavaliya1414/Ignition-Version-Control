@@ -1,0 +1,62 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1200,
+      "width": 1200
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "batchSelector"
+        },
+        "position": {
+          "basis": "37px"
+        },
+        "type": "mes.production.batchSelector"
+      },
+      {
+        "meta": {
+          "name": "batchRecipeMonitor"
+        },
+        "position": {
+          "basis": "628px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.batchID": {
+            "binding": {
+              "config": {
+                "path": "../batchSelector.props.selectedBatchID"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "enableManualExecution": true,
+          "enableManualStepCompletion": true,
+          "enableModeChange": true,
+          "selectedItemPath": null,
+          "style": {
+            "paddingTop": 15
+          }
+        },
+        "type": "mes.batch.batchRecipeMonitor"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "paddingTop": 10
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

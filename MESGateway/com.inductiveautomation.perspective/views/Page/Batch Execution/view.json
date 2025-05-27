@@ -1,0 +1,27 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1159
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "batchList"
+        },
+        "position": {
+          "basis": "1200px",
+          "grow": 1
+        },
+        "type": "mes.batch.batchList"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.flex"
+  }
+}

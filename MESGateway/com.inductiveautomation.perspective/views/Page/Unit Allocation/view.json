@@ -1,0 +1,99 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "height": 743,
+          "width": 773,
+          "x": 19,
+          "y": 49
+        },
+        "props": {
+          "data": {
+            "$": [
+              "ds",
+              192,
+              1747684314606
+            ],
+            "$columns": [
+              {
+                "data": [
+                  "FM1",
+                  "FM2",
+                  "FlowMeter",
+                  "Premix 1",
+                  "Premix 2",
+                  "Reactor 1",
+                  "Reactor 2",
+                  "Testing Station"
+                ],
+                "name": "Unit",
+                "type": "String"
+              },
+              {
+                "data": [
+                  "",
+                  "",
+                  "",
+                  "CHS1",
+                  "",
+                  "",
+                  "",
+                  ""
+                ],
+                "name": "Batch ID",
+                "type": "String"
+              }
+            ]
+          }
+        },
+        "type": "ia.display.table"
+      },
+      {
+        "events": {
+          "component": {
+            "onActionPerformed": {
+              "config": {
+                "script": "\t\n\tallocList \u003d system.mes.batch.unit.getAllocationList(0, 1000, \u0027\u0027, True, True)\n\tallocList2 \u003d {}\n\tfor alloc in allocList:\n\t\teqpath \u003d alloc.getAllocatedEquipmentPath()\n\t\ti \u003d eqpath.rindex(\u0027\\\\\u0027)\n\t\ti_right \u003d len(eqpath) - i - 1\n\t\tunitName \u003d eqpath[-i_right:]\n\t\tallocList2[unitName] \u003d alloc.getBatchID()\n\t\n\tparentLink \u003d system.mes.batch.unit.getProcessCellLink(\u0027Process Cell\u0027)\n\tunitList \u003d system.mes.batch.unit.getList(parentLink, 0, 1000, \u0027\u0027)\n\tunitList.sort()\n\tunitList2 \u003d []\n\tfor u in unitList:\n\t\ttry:\n\t\t\tunitList2.append([u.name, allocList2[u.name]])\n\t\texcept:\n\t\t\tunitList2.append([u.name, \u0027\u0027])\n\tunitList2.sort()\n\t\n\theaders \u003d [\u0027Unit\u0027,\u0027Batch ID\u0027]\n\tds \u003d system.dataset.toDataSet(headers, unitList2)\n\t\n\tself.getSibling(\"Table\").props.data \u003d ds\n\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          },
+          "system": {
+            "onStartup": {
+              "config": {
+                "script": "\t\t\n\tallocList \u003d system.mes.batch.unit.getAllocationList(0, 1000, \u0027\u0027, True, True)\n\tallocList2 \u003d {}\n\tfor alloc in allocList:\n\t\teqpath \u003d alloc.getAllocatedEquipmentPath()\n\t\ti \u003d eqpath.rindex(\u0027\\\\\u0027)\n\t\ti_right \u003d len(eqpath) - i - 1\n\t\tunitName \u003d eqpath[-i_right:]\n\t\tallocList2[unitName] \u003d alloc.getBatchID()\n\t\n\tparentLink \u003d system.mes.batch.unit.getProcessCellLink(\u0027Process Cell\u0027)\n\tunitList \u003d system.mes.batch.unit.getList(parentLink, 0, 1000, \u0027\u0027)\n\tunitList.sort()\n\tunitList2 \u003d []\n\tfor u in unitList:\n\t\ttry:\n\t\t\tunitList2.append([u.name, allocList2[u.name]])\n\t\texcept:\n\t\t\tunitList2.append([u.name, \u0027\u0027])\n\tunitList2.sort()\n\t\n\theaders \u003d [\u0027Unit\u0027,\u0027Batch ID\u0027]\n\tds \u003d system.dataset.toDataSet(headers, unitList2)\n\t\n\tself.getSibling(\"Table\").props.data \u003d ds\n\t\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 34,
+          "width": 80,
+          "x": 19,
+          "y": 6
+        },
+        "props": {
+          "text": "Refresh"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

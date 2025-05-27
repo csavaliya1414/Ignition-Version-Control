@@ -1,0 +1,6 @@
+{
+  "title": "MESGateway",
+  "description": "This is the default project all Sepasoft modules use for storing data.",
+  "enabled": true,
+  "inheritable": false
+}

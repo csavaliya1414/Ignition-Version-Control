@@ -1,0 +1,105 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 837,
+      "width": 1348
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "nodeClicked": {
+              "config": {
+                "script": "\tif event.getType() \u003d\u003d \u0027ResponseSegment\u0027:\n\t\tself.getSibling(\"emb_opInfo\").props.params.responseSegUUID \u003d event.getSegmentUUID()\n\telse:\n\t\tself.getSibling(\"emb_opInfo\").props.params.responseSegUUID \u003d \u0027\u0027"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "MES Trace Graph"
+        },
+        "position": {
+          "height": 0.9098,
+          "width": 0.7522,
+          "x": 0.2366,
+          "y": 0.0854
+        },
+        "propConfig": {
+          "props.lotUUID": {
+            "binding": {
+              "config": {
+                "path": "../mesLotSelector.props.selectedLotUUID"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "detailedMode": true
+        },
+        "type": "mes.trace.traceGraph"
+      },
+      {
+        "meta": {
+          "name": "mesLotSelector"
+        },
+        "position": {
+          "height": 0.061,
+          "width": 0.9837,
+          "x": 0.0045,
+          "y": 0.0122
+        },
+        "propConfig": {
+          "props.beginDateTime": {
+            "binding": {
+              "config": {
+                "expression": "dateArithmetic({this.props.endDateTime},-30,\"days\")"
+              },
+              "type": "expr"
+            }
+          },
+          "props.endDateTime": {
+            "binding": {
+              "config": {
+                "expression": "now(60000)"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "type": "mes.trace.mesLotSelector"
+      },
+      {
+        "meta": {
+          "name": "emb_opInfo"
+        },
+        "position": {
+          "height": 0.9098,
+          "width": 0.2248,
+          "x": 0.0045,
+          "y": 0.0854
+        },
+        "props": {
+          "params": {
+            "responseSegUUID": ""
+          },
+          "path": "Page/Embedded/TraceOperationInfo"
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

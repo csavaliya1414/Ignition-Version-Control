@@ -1,0 +1,29 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1029
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "mesEnumManager"
+        },
+        "position": {
+          "height": "95%",
+          "width": "95%",
+          "x": 5,
+          "y": 13
+        },
+        "type": "mes.production.mesEnumManager"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

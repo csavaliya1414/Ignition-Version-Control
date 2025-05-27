@@ -1,0 +1,53 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "batchSelector"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "type": "mes.production.batchSelector"
+      },
+      {
+        "meta": {
+          "name": "batchController"
+        },
+        "position": {
+          "basis": "765px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.batchID": {
+            "binding": {
+              "config": {
+                "path": "../batchSelector.props.selectedBatchID"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "paddingTop": 15
+          }
+        },
+        "type": "mes.batch.batchController"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "paddingTop": 10
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 741,
+      "width": 1088
+    },
+    "loading": {
+      "mode": "blocking"
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "EmbeddedView"
+        },
+        "position": {
+          "basis": "450px",
+          "grow": 1
+        },
+        "props": {
+          "path": "Page/Process Cell Machines/Messages and Monitor",
+          "style": {
+            "padding": 5
+          }
+        },
+        "type": "ia.display.view"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "justify": "space-between"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "custom": {
+    "Header-Color": "#003e69",
+    "ScannedLot-Color": "#F4F4F4"
+  },
+  "propConfig": {
+    "custom.Button-Color": {
+      "binding": {
+        "config": {
+          "path": "this.custom.Secondary-Yellow.Color"
+        },
+        "type": "property"
+      }
+    },
+    "custom.Button-Color-Disabled": {
+      "binding": {
+        "config": {
+          "path": "session.custom.Secondary-Yellow.B4"
+        },
+        "type": "property"
+      }
+    },
+    "custom.Button-Text-Color": {
+      "binding": {
+        "config": {
+          "path": "session.custom.Secondary-DarkGrey.W1"
+        },
+        "type": "property"
+      }
+    },
+    "custom.Primary-Blue": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[default]Style Library/Colors/Primary-Blue"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Primary-Green": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[default]Style Library/Colors/Primary-Green"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.ScannedLot-BackgroundColor": {
+      "binding": {
+        "config": {
+          "path": "this.custom.Secondary-DarkGrey.B3"
+        },
+        "type": "property"
+      }
+    },
+    "custom.Secondary-DarkGrey": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[default]Style Library/Colors/Secondary-DarkGrey"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Secondary-Orange": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[default]Style Library/Colors/Secondary-Orange"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Secondary-Purple": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[default]Style Library/Colors/Secondary-Purple"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Secondary-Red": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[default]Style Library/Colors/Secondary-Red"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Secondary-Teal": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[default]Style Library/Colors/Secondary-Teal"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Secondary-Yellow": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[default]Style Library/Colors/Secondary-Yellow"
+        },
+        "type": "tag"
+      }
+    },
+    "custom.Tertiary-GreyBlue": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "direct",
+          "tagPath": "[default]Style Library/Colors/Tertiary-GreyBlue"
+        },
+        "type": "tag"
+      }
+    },
+    "props.auth": {
+      "access": "PRIVATE",
+      "persistent": false
+    },
+    "props.device.accelerometer": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.identifier": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.timezone": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.type": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.device.userAgent": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.gateway": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.geolocation.data": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.geolocation.permissionGranted": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.host": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.id": {
+      "access": "SYSTEM",
+      "persistent": false
+    },
+    "props.lastActivity": {
+      "access": "SYSTEM",
+      "persistent": false
+    }
+  },
+  "props": {
+    "address": "[0:0:0:0:0:0:0:1]",
+    "device": {},
+    "geolocation": {},
+    "locale": "en-US",
+    "securityLevels": [],
+    "timeZoneId": "America/New_York"
+  }
+}

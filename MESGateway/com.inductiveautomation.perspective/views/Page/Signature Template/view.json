@@ -1,0 +1,26 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "mesSignatureTemplateManager"
+        },
+        "position": {
+          "height": 1,
+          "width": 1
+        },
+        "type": "mes.production.mesSignatureTemplateManager"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "mode": "percent"
+    },
+    "type": "ia.container.coord"
+  }
+}

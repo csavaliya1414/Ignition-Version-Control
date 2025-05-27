@@ -1,0 +1,35 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 1200,
+      "width": 1500
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "mesEquipmentManager"
+        },
+        "position": {
+          "basis": "1500px",
+          "grow": 1
+        },
+        "props": {
+          "enablePaging": false,
+          "requireChangeNote": true
+        },
+        "type": "mes.production.mesEquipmentManager"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

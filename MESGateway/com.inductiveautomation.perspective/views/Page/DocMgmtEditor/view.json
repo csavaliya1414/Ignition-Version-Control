@@ -1,0 +1,195 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "events": {
+          "component": {
+            "documentSaved": {
+              "config": {
+                "script": "\tself.getSibling(\"docStatus\").props.text \u003d \u0027\u0027\n\tself.getSibling(\"unsavedChanges\").props.text \u003d \"\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          },
+          "dom": {
+            "onKeyPress": {
+              "config": {
+                "script": "\tself.getSibling(\"docStatus\").props.text \u003d \u0027Editing...\u0027"
+              },
+              "scope": "G",
+              "type": "script"
+            },
+            "onPointerEnter": {
+              "config": {
+                "script": "\tself.getSibling(\"unsavedChanges\").props.text \u003d \"\""
+              },
+              "scope": "G",
+              "type": "script"
+            },
+            "onPointerLeave": {
+              "config": {
+                "script": "\tif self.getSibling(\"docStatus\").props.text \u003d\u003d \u0027Editing...\u0027:\n\t\tself.getSibling(\"unsavedChanges\").props.text \u003d \"You have unsaved changes!\"\n\t"
+              },
+              "scope": "G",
+              "type": "script"
+            },
+            "onTouchStart": {
+              "config": {
+                "script": "\tself.getSibling(\"docStatus\").props.text \u003d \u0027touched\u0027"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          },
+          "system": {
+            "onStartup": {
+              "config": {
+                "script": "\tself.getSibling(\"docStatus\").props.text \u003d \u0027\u0027\n\tself.getSibling(\"unsavedChanges\").props.text \u003d \"\"\n\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "docDocumentEditor"
+        },
+        "position": {
+          "height": 740,
+          "width": 799,
+          "x": 0.5,
+          "y": 60
+        },
+        "propConfig": {
+          "props.selectedMESObject": {
+            "binding": {
+              "config": {
+                "path": "../mesObjectSelector.props.selectedMESObject"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "documentText": "\u003cdiv\u003e\u003cp\u003eawefawefawefwef23f\u0026nbsp; \u0026nbsp; wwefwef23fer\u003c/p\u003e\u003c/div\u003e",
+          "selectedArtifactName": "storageunit_fg-storage_doclog"
+        },
+        "type": "mes.doc.docDocumentEditor"
+      },
+      {
+        "events": {
+          "component": {
+            "objectSelected": {
+              "config": {
+                "script": "\tobjectName \u003d self.props.selectedMESObject.name\n\tmesObjectTypeName \u003d self.props.selectedMESObject.mesObjectType\n\teqp \u003d system.mes.loadMESObject(objectName, mesObjectTypeName)\n\t\n\tinitialArtifactName \u003d mesObjectTypeName+\u0027_\u0027+objectName+\u0027_doclog\u0027\n\tartifactName \u003d (initialArtifactName.replace(\" \",\"-\")).lower()\n#\tartifactName \u003d \u0027test3\u0027\n\t\n\tif artifactName in eqp.allArtifactNames:\n\t\tpass\n\telse:\n\t\teqp.createArtifact(artifactName,\"\")\n\t\teqp.save()\n\n\tself.getSibling(\"docDocumentEditor\").props.selectedArtifactName \u003d artifactName\n\tself.getSibling(\"docStatus\").props.text \u003d \u0027new\u0027\n\tself.getSibling(\"unsavedChanges\").props.text \u003d \u0027\u0027"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "mesObjectSelector"
+        },
+        "position": {
+          "height": 50,
+          "width": 369,
+          "x": 8,
+          "y": 10
+        },
+        "props": {
+          "includeMESAreaObjects": true,
+          "includeMESEnterpriseObjects": true,
+          "includeMESLineCellGroupObjects": true,
+          "includeMESLineCellObjects": true,
+          "includeMESLineObjects": true,
+          "includeMESLocationObjects": true,
+          "includeMESSiteObjects": true,
+          "includeMESStorageUnitObjects": true,
+          "includeMESStorageZoneObjects": true,
+          "includeMaterialDefObjects": true,
+          "selectedMESObject": {
+            "childCount": -1,
+            "equipmentPath": "Enterprise\\Site\\Area\\HC Storage Zone\\FG Storage",
+            "mesObjectType": "StorageUnit",
+            "mesObjectUUID": "bcb08a29-50ea-4fba-813c-c9d86fcbdb24",
+            "name": "FG Storage"
+          }
+        },
+        "type": "mes.production.mesObjectSelector"
+      },
+      {
+        "meta": {
+          "name": "Black"
+        },
+        "position": {
+          "height": 31,
+          "width": 338,
+          "x": 217,
+          "y": 69
+        },
+        "props": {
+          "fit": {
+            "mode": "fill"
+          },
+          "source": "/system/images/Black.png"
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "meta": {
+          "name": "Black_0"
+        },
+        "position": {
+          "height": 31,
+          "rotate": {
+            "anchor": "25% 25%"
+          },
+          "width": 81,
+          "x": 9,
+          "y": 69
+        },
+        "props": {
+          "fit": {
+            "mode": "fill"
+          },
+          "source": "/system/images/Black.png"
+        },
+        "type": "ia.display.image"
+      },
+      {
+        "meta": {
+          "name": "docStatus",
+          "visible": false
+        },
+        "position": {
+          "height": 32,
+          "width": 98,
+          "x": 413,
+          "y": 28
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "unsavedChanges"
+        },
+        "position": {
+          "height": 32,
+          "width": 202,
+          "x": 586,
+          "y": 28
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

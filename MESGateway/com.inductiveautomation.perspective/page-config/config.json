@@ -1,0 +1,148 @@
+{
+  "pages": {
+    "/": {
+      "title": "Sepasoft Batch and Procedure Module",
+      "viewPath": "Page/Home"
+    },
+    "/alarms": {
+      "viewPath": "Page/Alarms"
+    },
+    "/batch-controller": {
+      "title": "",
+      "viewPath": "Page/Batch Controller"
+    },
+    "/batch-execution": {
+      "viewPath": "Page/Batch Execution"
+    },
+    "/batch-monitor": {
+      "viewPath": "Page/Batch Monitor"
+    },
+    "/batchreport": {
+      "title": "",
+      "viewPath": "Page/BatchReport"
+    },
+    "/changelog": {
+      "title": "Change Log",
+      "viewPath": "Page/ChangeLog"
+    },
+    "/charts": {
+      "viewPath": "Page/Charts"
+    },
+    "/docmgmteditor": {
+      "title": "",
+      "viewPath": "Page/DocMgmtEditor"
+    },
+    "/docmgmtviewer": {
+      "viewPath": "Page/DocMgmtViewer"
+    },
+    "/document": {
+      "viewPath": "Page/Document"
+    },
+    "/documentviewer": {
+      "title": "",
+      "viewPath": "Page/DocumentViewer"
+    },
+    "/ebr-viewer": {
+      "title": "",
+      "viewPath": "Page/EBRViewer"
+    },
+    "/enummanager": {
+      "viewPath": "Page/EnumManager"
+    },
+    "/equip-manager": {
+      "viewPath": "Page/Equipment Manager"
+    },
+    "/formulas": {
+      "viewPath": "Page/Formulas"
+    },
+    "/formulas-admin": {
+      "title": "Formulas Admin",
+      "viewPath": "Page/Formulas Admin"
+    },
+    "/impromptuanalysis": {
+      "title": "",
+      "viewPath": "Page/ImpromptuAnalysis"
+    },
+    "/inventory": {
+      "title": "Inventory",
+      "viewPath": "Page/Inventory"
+    },
+    "/materialmanager": {
+      "title": "Material Manager",
+      "viewPath": "Page/MaterialManager"
+    },
+    "/message-list": {
+      "viewPath": "Page/Message List"
+    },
+    "/phase-manager": {
+      "viewPath": "Page/Phase Manager"
+    },
+    "/process-cell-view": {
+      "viewPath": "Page/Process Cell View"
+    },
+    "/receiving": {
+      "viewPath": "Page/Embedded/Receiving"
+    },
+    "/recipe-editor": {
+      "viewPath": "Page/Recipe Editor"
+    },
+    "/signature-template": {
+      "title": "Signature Template Manager",
+      "viewPath": "Page/Signature Template"
+    },
+    "/tracegraph": {
+      "title": "",
+      "viewPath": "Page/Tracegraph"
+    },
+    "/unit-class-manager": {
+      "viewPath": "Page/Unit Class Manager"
+    },
+    "/unit-manager": {
+      "viewPath": "Page/Unit Manager"
+    },
+    "/unitallocation": {
+      "title": "Unit Allocation",
+      "viewPath": "Page/Unit Allocation"
+    }
+  },
+  "sharedDocks": {
+    "cornerPriority": "top-bottom",
+    "left": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 768,
+        "content": "push",
+        "handle": "show",
+        "iconUrl": "",
+        "id": "menu",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 210,
+        "viewParams": {},
+        "viewPath": "Docks/Menu"
+      }
+    ],
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 58,
+        "viewParams": {
+          "breakpointLarge": "768",
+          "breakpointMedium": "500",
+          "params": {},
+          "path": "Header/Header"
+        },
+        "viewPath": "Framework/Breakpoint"
+      }
+    ]
+  }
+}

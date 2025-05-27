@@ -1,0 +1,28 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "formulaManager"
+        },
+        "position": {
+          "basis": "1200px"
+        },
+        "props": {
+          "mesAdmin": false
+        },
+        "type": "mes.batch.formulaManager"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

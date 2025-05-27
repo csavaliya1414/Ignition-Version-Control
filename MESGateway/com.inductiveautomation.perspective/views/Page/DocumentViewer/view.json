@@ -1,0 +1,131 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "width": 1298
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "batchController"
+        },
+        "position": {
+          "height": 290,
+          "width": 1024,
+          "x": 18,
+          "y": 71
+        },
+        "propConfig": {
+          "props.batchID": {
+            "binding": {
+              "config": {
+                "path": "../batchSelector.props.selectedBatchID"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "itemPath": "/Doc Coalesce",
+          "showMessages": false,
+          "showParameters": false,
+          "showTransitionStatus": false
+        },
+        "type": "mes.batch.batchController"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tuserName \u003d self.session.props.auth.user.userName\n\tbatchID \u003d self.props.batchInfo.batchID\n\tbqe \u003d system.mes.batch.queue.getEntry(batchID)\n\tpath \u003d self.props.batchInfo.itemPath+\u0027.user\u0027\n\ttry:\n\t\tsystem.mes.batch.queue.setParameterValue(bqe, path, userName)\n\texcept:\n\t\tlogger \u003d system.util.getLogger(\u0027Username to Document\u0027)\n\t\tlogger.info(\u0027Username not written because no phase param available\u0027)\n"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "docDocumentViewer"
+        },
+        "position": {
+          "height": 500,
+          "width": 1024,
+          "x": 18,
+          "y": 370
+        },
+        "propConfig": {
+          "props.batchInfo.batchID": {
+            "binding": {
+              "config": {
+                "path": "../batchController.props.batchID"
+              },
+              "type": "property"
+            }
+          },
+          "props.batchInfo.itemPath": {
+            "binding": {
+              "config": {
+                "path": "../batchController.props.itemPath"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "batchInfo": {},
+          "documentText": ""
+        },
+        "type": "mes.doc.docDocumentViewer"
+      },
+      {
+        "meta": {
+          "name": "batchSelector"
+        },
+        "position": {
+          "height": 30,
+          "width": 891,
+          "x": 17,
+          "y": 16
+        },
+        "props": {
+          "selectedBatchID": "dc45"
+        },
+        "type": "mes.production.batchSelector"
+      },
+      {
+        "meta": {
+          "name": "Button"
+        },
+        "position": {
+          "height": 39,
+          "width": 116,
+          "x": 926,
+          "y": 23
+        },
+        "props": {
+          "text": "Combine Docs"
+        },
+        "type": "ia.input.button"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "script": "\tdef checkStep(procedure, step, doc):\n\t    phase \u003d step.getPhaseLink().getMESObject()\n\t    phaseType \u003d phase.getPhaseType()\n\t    if str(phaseType) \u003d\u003d \u0027DOCUMENT\u0027:\n\t        docName \u003d step.getMasterRefUUID()+\u0027-document\u0027\n\t        sDoc \u003d procedure.getArtifactValueByName(docName)\n\t        doc \u003d doc+sDoc\n\t    elif str(phaseType) \u003d\u003d \u0027UNIT_PROCEDURE\u0027 or str(phaseType) \u003d\u003d \u0027OPERATION\u0027:\n\t        stepLogic \u003d step.getLogicLink().getMESObject()\n\t        subSteps \u003d stepLogic.getSteps()\n\t        for subStep in subSteps:\n\t            doc \u003d checkStep(stepLogic, subStep, doc)\n\t    return doc\n\n\t# imports\n\timport os\n\timport sys\n\timport fileinput\n\t\n\t# batch info\n\tbatchID \u003d self.getChild(\"batchSelector\").props.selectedBatchID\n\t\n\t# artifact info\n\tartifactName \u003d \u0027documents\u0027\n\t\n\t# initialization\n\tdoc \u003d \u0027\u0027    \n\t\n\t# get the batch steps\n\tbqe \u003d system.mes.batch.queue.getEntry(batchID)\n\tcontrolRecipeLink \u003d bqe.getRecipeControlLink().getMESObject()\n\tprocedure \u003d controlRecipeLink.getProcedureLogicLink().getMESObject()\n\tsteps \u003d procedure.getSteps()\n\t\n\t# cycle through the steps\n\tfor step in steps:\n\t    doc \u003d checkStep(procedure, step, doc)\n\t    \n\t# write the results\n\tbasePath \u003d \u0027[default]BatchDocuments\u0027\n\ttagName \u003d batchID\n\tvalueSource \u003d \"memory\"\n\ttagGroup \u003d \"default\"\n\ttag \u003d {\n\t\t\"name\": tagName,           \n\t\t\"valueSource\": \"memory\",\n\t\t\"dataType\" : \"String\"\n\t\t}\n\ttags \u003d [tag]\n\ttagPath \u003d basePath+\u0027/\u0027+tagName\n\tcollisionPolicy \u003d \u0027o\u0027\n\texists \u003d system.tag.exists(tagPath)\n\tsystem.tag.configure(basePath, tag, collisionPolicy)\n\tsystem.tag.writeBlocking([tagPath], [doc])"
+          },
+          "scope": "G",
+          "type": "script"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

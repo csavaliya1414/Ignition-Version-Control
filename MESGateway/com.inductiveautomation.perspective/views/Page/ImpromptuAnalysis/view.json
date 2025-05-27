@@ -1,0 +1,192 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "DateTimeInputTo"
+        },
+        "position": {
+          "height": 32.02,
+          "width": 174.29,
+          "x": 416.26,
+          "y": 13.03
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "expression": "now(84600)"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "formattedValue": "Mar 24, 2025 6:48 PM"
+        },
+        "type": "ia.input.date-time-input"
+      },
+      {
+        "meta": {
+          "name": "mesAnalysisSelector"
+        },
+        "position": {
+          "height": 704.7,
+          "width": 300,
+          "x": 20.49,
+          "y": 65.3
+        },
+        "propConfig": {
+          "props.endDate": {
+            "binding": {
+              "config": {
+                "path": "../DateTimeInputTo.props.value"
+              },
+              "type": "property"
+            }
+          },
+          "props.startDate": {
+            "binding": {
+              "config": {
+                "path": "../DateTimeInputFrom.props.value"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "data": {
+            "$": [
+              "ds",
+              192,
+              1645833675539
+            ],
+            "$columns": []
+          },
+          "drillDownOptions": {
+            "$": [
+              "ds",
+              192,
+              1645833675540
+            ],
+            "$columns": []
+          },
+          "executionTime": 28
+        },
+        "type": "mes.production.mesAnalysisSelector"
+      },
+      {
+        "meta": {
+          "name": "DateTimeInputFrom"
+        },
+        "position": {
+          "height": 32.02,
+          "width": 174.43,
+          "x": 108.25,
+          "y": 12.56
+        },
+        "propConfig": {
+          "props.value": {
+            "binding": {
+              "config": {
+                "expression": "dateArithmetic({../DateTimeInputTo.props.value}, -1, \"day\")"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "formattedValue": "Mar 23, 2025 6:48 PM"
+        },
+        "type": "ia.input.date-time-input"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 89,
+          "x": 6,
+          "y": 12
+        },
+        "props": {
+          "style": {
+            "textAlign": "right"
+          },
+          "text": "From Date"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "Label_0"
+        },
+        "position": {
+          "height": 32,
+          "width": 89,
+          "x": 315.5,
+          "y": 13.03125
+        },
+        "props": {
+          "style": {
+            "textAlign": "right"
+          },
+          "text": "To Date"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "mesAnalysisTable"
+        },
+        "position": {
+          "height": 707,
+          "width": "75%",
+          "x": 337,
+          "y": 65.3
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "path": "../mesAnalysisSelector.props.data"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "tableColumns": [
+            {
+              "align": "left",
+              "alignVertical": "middle",
+              "columnName": "nodata",
+              "dataFormat": "",
+              "dataType": "string",
+              "fixed": false,
+              "hidden": false,
+              "include": false,
+              "name": "nodata",
+              "order": 0,
+              "originalTitle": "",
+              "searchEnabled": false,
+              "sortingEnabled": false,
+              "title": "",
+              "width": 0,
+              "wordWrapEnabled": false
+            }
+          ]
+        },
+        "type": "mes.production.mesAnalysisTable"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

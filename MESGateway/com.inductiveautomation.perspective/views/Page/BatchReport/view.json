@@ -1,0 +1,69 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "ReportViewer"
+        },
+        "position": {
+          "height": "90%",
+          "width": "100%",
+          "y": 60
+        },
+        "propConfig": {
+          "props.params.BatchID": {
+            "binding": {
+              "config": {
+                "path": "../BatchIDTextField.props.text"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "page": 1,
+          "pageCount": 1,
+          "source": "BatchReport"
+        },
+        "type": "ia.reporting.report-viewer"
+      },
+      {
+        "meta": {
+          "name": "BatchIDTextField"
+        },
+        "position": {
+          "height": 32,
+          "width": 244,
+          "x": 111,
+          "y": 12
+        },
+        "type": "ia.input.text-field"
+      },
+      {
+        "meta": {
+          "name": "Label"
+        },
+        "position": {
+          "height": 32,
+          "width": 89,
+          "x": 6,
+          "y": 12
+        },
+        "props": {
+          "style": {
+            "textAlign": "right"
+          },
+          "text": "Batch ID"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

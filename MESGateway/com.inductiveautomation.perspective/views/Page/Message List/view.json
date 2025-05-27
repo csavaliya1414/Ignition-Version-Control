@@ -1,0 +1,29 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "batchMessageList"
+        },
+        "position": {
+          "basis": "500px",
+          "grow": 1
+        },
+        "props": {
+          "minimized": false
+        },
+        "type": "mes.batch.batchMessageList"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

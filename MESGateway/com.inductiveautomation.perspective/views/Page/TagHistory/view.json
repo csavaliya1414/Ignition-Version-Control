@@ -1,0 +1,169 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 854,
+      "width": 1167
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Table"
+        },
+        "position": {
+          "height": 847,
+          "width": 1150,
+          "x": 9,
+          "y": 6
+        },
+        "propConfig": {
+          "props.data": {
+            "binding": {
+              "config": {
+                "aggregate": "MinMax",
+                "avoidScanClassValidation": true,
+                "dateRange": {
+                  "mostRecent": "5",
+                  "mostRecentUnits": "MIN"
+                },
+                "enableValueCache": true,
+                "ignoreBadQuality": false,
+                "polling": {
+                  "enabled": false,
+                  "rate": "30"
+                },
+                "preventInterpolation": false,
+                "returnFormat": "Wide",
+                "returnSize": {
+                  "numRows": "1000",
+                  "type": "FIXED"
+                },
+                "tags": [
+                  {
+                    "alias": "Acmdnum",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/add ingredient a/command_number"
+                  },
+                  {
+                    "alias": "Apv",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/add ingredient a/pv_amount"
+                  },
+                  {
+                    "alias": "Asp",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/add ingredient a/sp_amount"
+                  },
+                  {
+                    "alias": "Astate",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/add ingredient a/state"
+                  },
+                  {
+                    "alias": "Astatenum",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/add ingredient a/state_number"
+                  },
+                  {
+                    "alias": "Bcmdnum",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/add ingredient b/command_number"
+                  },
+                  {
+                    "alias": "Bpv",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/add ingredient b/pv_amount"
+                  },
+                  {
+                    "alias": "Bsp",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/add ingredient b/sp_amount"
+                  },
+                  {
+                    "alias": "Bstate",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/add ingredient b/state"
+                  },
+                  {
+                    "alias": "Bstatenum",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/add ingredient b/state_number"
+                  },
+                  {
+                    "alias": "Xpv",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/premix transfer out/pv_transferamount"
+                  },
+                  {
+                    "alias": "Xsp",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/premix transfer out/sp_transferamount"
+                  },
+                  {
+                    "alias": "Xcmdnum",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/premix transfer out/command_number"
+                  },
+                  {
+                    "alias": "Xstate",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/premix transfer out/state"
+                  },
+                  {
+                    "alias": "Xstatenum",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/premix transfer out/state_number"
+                  },
+                  {
+                    "alias": "Xsyncconfcomplete",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/premix transfer out/sync_confirm_complete"
+                  },
+                  {
+                    "alias": "Xsyncconfinit",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/premix transfer out/sync_confirm_initialize"
+                  },
+                  {
+                    "alias": "Xsyncflagcomplete",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/premix transfer out/sync_flag_complete"
+                  },
+                  {
+                    "alias": "Xsyncflaginit",
+                    "path": "[MES/batch demo:mes]enterprise/site/area/process cell/premix 1/batch phases/premix transfer out/sync_flag_initialize"
+                  }
+                ],
+                "valueFormat": "DATASET"
+              },
+              "type": "tag-history"
+            }
+          }
+        },
+        "props": {
+          "pager": {
+            "activePage": 16
+          },
+          "selection": {
+            "data": [
+              {
+                "Acmdnum": 0,
+                "Apv": 20,
+                "Asp": 20,
+                "Astate": "Idle",
+                "Astatenum": 1,
+                "Bcmdnum": 0,
+                "Bpv": 5,
+                "Bsp": 5,
+                "Bstate": "Idle",
+                "Bstatenum": 1,
+                "Xcmdnum": 0,
+                "Xpv": 0,
+                "Xsp": 35,
+                "Xstate": "Idle",
+                "Xstatenum": 1,
+                "Xsyncconfcomplete": 1,
+                "Xsyncconfinit": 1,
+                "Xsyncflagcomplete": 1,
+                "Xsyncflaginit": 1,
+                "t_stamp": 1671582169538
+              }
+            ],
+            "selectedColumn": "Xsyncconfcomplete",
+            "selectedRow": 511
+          }
+        },
+        "type": "ia.display.table"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}

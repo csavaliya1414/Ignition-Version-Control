@@ -1,0 +1,112 @@
+{
+  "custom": {
+    "batch_id": null,
+    "state": null
+  },
+  "params": {
+    "unitPath": "Enterprise/Site/Pharma/Filling Process Cell/Filler 2"
+  },
+  "propConfig": {
+    "custom.batch_id": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "publishInitial": true,
+          "references": {
+            "unitPath": "{view.params.unitPath}"
+          },
+          "tagPath": "[MES]{unitPath}/Batch Details/Batch_ID"
+        },
+        "transforms": [
+          {
+            "code": "\treturn None if quality.isUncertain() else value",
+            "type": "script"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "custom.state": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "publishInitial": true,
+          "references": {
+            "unitPath": "{view.params.unitPath}"
+          },
+          "tagPath": "[MES]{unitPath}/Batch Details/State"
+        },
+        "transforms": [
+          {
+            "code": "\treturn None if quality.isUncertain() else value",
+            "type": "script"
+          }
+        ],
+        "type": "tag"
+      },
+      "persistent": true
+    },
+    "params.unitPath": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "batchRecipeMonitor"
+        },
+        "position": {
+          "basis": "500px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.batchID": {
+            "binding": {
+              "config": {
+                "expression": "if({view.custom.state} \u003d \"Running\", {view.custom.batch_id}, \"\") "
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "selectedItemPath": null
+        },
+        "type": "mes.batch.batchRecipeMonitor"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "scripts": {
+      "customMethods": [],
+      "extensionFunctions": null,
+      "messageHandlers": [
+        {
+          "messageType": "SwitchBatchID",
+          "pageScope": true,
+          "script": "\tbatchID \u003d payload[\u0027BatchID\u0027]\n\tself.getChild(\"batchRecipeMonitor\").props.batchID \u003d batchID",
+          "sessionScope": false,
+          "viewScope": false
+        },
+        {
+          "messageType": "UpdatePath",
+          "pageScope": true,
+          "script": "\tself.view.params.unitPath \u003d payload[\u0027UnitPath\u0027]",
+          "sessionScope": false,
+          "viewScope": false
+        }
+      ]
+    },
+    "type": "ia.container.flex"
+  }
+}

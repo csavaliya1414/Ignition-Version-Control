@@ -1,0 +1,34 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 828,
+      "width": 1266
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "phaseManager"
+        },
+        "position": {
+          "basis": "828px",
+          "grow": 1
+        },
+        "props": {
+          "enablePagination": false
+        },
+        "type": "mes.batch.phaseManager"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 857,
+      "width": 1002
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "batchRecipeEditor"
+        },
+        "position": {
+          "basis": "857px",
+          "grow": 1
+        },
+        "type": "mes.batch.batchRecipeEditor"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {},
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "docDocumentViewer"
+        },
+        "position": {
+          "height": 685,
+          "width": 799,
+          "y": 87
+        },
+        "propConfig": {
+          "props.selectedMESObject": {
+            "binding": {
+              "config": {
+                "path": "../mesObjectSelector.props.selectedMESObject"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "documentText": "\u003cdiv\u003e\u003cp\u003erthresgerg\u003c/p\u003e\u003c/div\u003e",
+          "selectedArtifactName": "storageunit_rm-storage_doclog"
+        },
+        "type": "mes.doc.docDocumentViewer"
+      },
+      {
+        "events": {
+          "component": {
+            "objectSelected": {
+              "config": {
+                "script": "\tobjectName \u003d self.props.selectedMESObject.name\n\tmesObjectTypeName \u003d self.props.selectedMESObject.mesObjectType\n\teqp \u003d system.mes.loadMESObject(objectName, mesObjectTypeName)\n\t\n\tinitialArtifactName \u003d mesObjectTypeName+\u0027_\u0027+objectName+\u0027_doclog\u0027\n\tartifactName \u003d (initialArtifactName.replace(\" \",\"-\")).lower()\n#\tartifactName \u003d \u0027test3\u0027\n\t\n\tif artifactName in eqp.allArtifactNames:\n\t\tpass\n\telse:\n\t\teqp.createArtifact(artifactName,\"\")\n\t\teqp.save()\n\n\tself.getSibling(\"docDocumentViewer\").props.selectedArtifactName \u003d artifactName"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "mesObjectSelector"
+        },
+        "position": {
+          "height": 50,
+          "width": 511
+        },
+        "props": {
+          "includeMESAreaObjects": true,
+          "includeMESEnterpriseObjects": true,
+          "includeMESLineCellGroupObjects": true,
+          "includeMESLineCellObjects": true,
+          "includeMESLineObjects": true,
+          "includeMESLocationObjects": true,
+          "includeMESSiteObjects": true,
+          "includeMESStorageUnitObjects": true,
+          "includeMESStorageZoneObjects": true,
+          "selectedMESObject": {
+            "childCount": -1,
+            "equipmentPath": "Enterprise\\Site\\Area\\HC Storage Zone\\RM Storage",
+            "mesObjectType": "StorageUnit",
+            "mesObjectUUID": "0e1c2c42-d568-4448-812a-4bbdc1086bd1",
+            "name": "RM Storage"
+          }
+        },
+        "type": "mes.production.mesObjectSelector"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "type": "ia.container.coord"
+  }
+}
